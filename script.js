@@ -1,4 +1,8 @@
-const millerRabinTest = (n, k) => {
+const millerRabinTest = () => {
+    let n = parseInt(document.body.querySelector('#n').value);
+    let k = parseInt(document.body.querySelector('#k').value);
+    let result = document.createElement('h1');
+    let answer = true;
     if (n === 2 || n === 3) return true;
     if (n % 2 === 0 || n < 2) return false;
 
@@ -19,8 +23,10 @@ const millerRabinTest = (n, k) => {
             if (x === 1) return false;
             if (x === n - 1) continue WitnessLoop;
         }
-        return false;
+        answer = false;
     } while (--k);
 
-    return true;
+    result.innerHTML = answer;
+    document.body.append(result);
+    setTimeout(() => result.remove(), 1000);
 }

@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="body_main-div">
-        <div id="n" class="body_main-input">
-            <input type="number">
+    <form onsubmit="return false">
+        <div class="body_main-div">
+            <h1>Miller–Rabin primality test</h1>
+            <div class="body_main-input">
+                <input id="n" placeholder="Number" type="number">
+            </div>
+            <div class="body_main-input">
+                <input id="k" placeholder="Number of rounds" type="number">
+            </div>
+            <button onclick="millerRabinTest()">Click</button>
         </div>
-        <input id="result" type="text">
-    </div>
+    </form>
     <script src="script.js"></script>
 </body>
 
